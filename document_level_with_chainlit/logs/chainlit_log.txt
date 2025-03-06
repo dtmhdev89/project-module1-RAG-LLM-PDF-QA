@@ -1,0 +1,47 @@
+2025-03-06 15:50:06 - Use pytorch device_name: mps
+2025-03-06 15:50:06 - Load pretrained SentenceTransformer: sentence-transformers/all-MiniLM-L6-v2
+/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/huggingface_hub/file_download.py:797: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Traceback (most recent call last):
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/context.py", line 106, in get_context
+    return context_var.get()
+LookupError: <ContextVar name='chainlit' at 0x1066a3c90>
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/bin/chainlit", line 8, in <module>
+    sys.exit(cli())
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/click/core.py", line 1161, in __call__
+    return self.main(*args, **kwargs)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/click/core.py", line 1082, in main
+    rv = self.invoke(ctx)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/click/core.py", line 1697, in invoke
+    return _process_result(sub_ctx.command.invoke(sub_ctx))
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/click/core.py", line 1443, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/click/core.py", line 788, in invoke
+    return __callback(*args, **kwargs)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/cli/__init__.py", line 215, in chainlit_run
+    run_chainlit(target)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/cli/__init__.py", line 78, in run_chainlit
+    load_module(config.run.module_name)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/config.py", line 423, in load_module
+    spec.loader.exec_module(module)
+  File "<frozen importlib._bootstrap_external>", line 883, in exec_module
+  File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/app.py", line 157, in <module>
+    vector_db = get_vector_db(docs, embedding, vector_db_path)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/app.py", line 89, in get_vector_db
+    cl.user_session.set("docs", docs)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/user_session.py", line 40, in set
+    if not context.session:
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/lazify.py", line 133, in __getattr__
+    return getattr(self.value, name)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/lazify.py", line 56, in value
+    value = self._func(*self._args, **self._kwargs)
+  File "/Users/jrvn-hieu/Desktop/AIO2024/practices/project-module1-RAG-LLM-PDF-QA/document_level_with_chainlit/.venv/lib/python3.10/site-packages/chainlit/context.py", line 108, in get_context
+    raise ChainlitContextException from e
+chainlit.context.ChainlitContextException: Chainlit context not found
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1741251015.622798 52178804 init.cc:232] grpc_wait_for_shutdown_with_timeout() timed out.
